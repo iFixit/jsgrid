@@ -599,7 +599,7 @@
             });
 
             return $("<tr>").addClass(this.noDataRowClass)
-                .append($("<td>").attr("colspan", amountOfFields)
+                .append($("<td>").addClass(this.cellClass).attr("colspan", amountOfFields)
                     .append(this.renderTemplate(this.noDataContent, this)));
         },
 
@@ -2486,10 +2486,9 @@
         _createGridButton: function(cls, tooltip, clickHandler) {
             var grid = this._grid;
 
-            return $("<input>").addClass(this.buttonClass)
+            return $("<i>").addClass(this.buttonClass)
                 .addClass(cls)
                 .attr({
-                    type: "button",
                     title: tooltip
                 })
                 .on("click", function(e) {

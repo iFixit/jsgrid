@@ -201,10 +201,9 @@
         _createGridButton: function(cls, tooltip, clickHandler) {
             var grid = this._grid;
 
-            return $("<input>").addClass(this.buttonClass)
+            return $("<i>").addClass(this.buttonClass)
                 .addClass(cls)
                 .attr({
-                    type: "button",
                     title: tooltip
                 })
                 .on("click", function(e) {
